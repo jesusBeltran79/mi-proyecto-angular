@@ -1,0 +1,18 @@
+.hud {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.lives .icon {
+  width: 24px;
+  margin-right: 4px;
+}
+.info span {
+  display: block;
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 1px 1px #000;
+}

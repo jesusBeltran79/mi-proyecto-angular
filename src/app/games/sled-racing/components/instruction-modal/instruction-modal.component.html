@@ -1,0 +1,12 @@
+<div class="modal-backdrop" (click)="close()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2>Instructions</h2>
+    <ul>
+      <li><strong>← →</strong>: Move sled</li>
+      <li><strong>↑</strong>: Jump</li>
+      <li><strong>Turbo Boost</strong>: +30% speed (3s)</li>
+      <li><strong>Snow Shield</strong>: Invulnerable (5s)</li>
+    </ul>
+    <button class="btn-close" (click)="close()">Close</button>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.end-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex; justify-content: center; align-items: center;
+}
+.end-box {
+  background: #8b5a2b;
+  padding: 24px;
+  width: 400px; height: 300px;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+}
+.end-box button {
+  margin: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}

@@ -1,0 +1,94 @@
+<!-- src/app/navbar.component.html -->
+<nav class="cp-navbar">
+  <div class="logo" (click)="selectTab('Inicio')">
+    <img src="/assets/phaser/games/logocp.png" alt="Club Penguin">
+  </div>
+  <ul class="nav-links">
+    <li
+      *ngFor="let t of tabs"
+      [class.active]="activeTab === t"
+      (click)="selectTab(t)"
+    >
+      {{ t }}
+    </li>
+  </ul>
+</nav>
+
+<div class="catalog-container">
+  <!-- INICIO: small cards con dos secciones -->
+  <div *ngIf="activeTab === 'Inicio'" class="section">
+    <h5>Singleplayer</h5>
+    <div class="cards small">
+      <div
+        class="card"
+        *ngFor="let g of singleplayer"
+        [class.selected]="selectedGame === g.key"
+      >
+        <button
+          type="button"
+          [routerLink]="['/games', g.key]"
+          (click)="goToGame(g.key)"
+        >
+          <img [src]="g.img" [alt]="g.title">
+        </button>
+      </div>
+    </div>
+
+    <h5>Multiplayer</h5>
+    <div class="cards small">
+      <div
+        class="card"
+        *ngFor="let g of multiplayer"
+        [class.selected]="selectedGame === g.key"
+      >
+        <button
+          type="button"
+          [routerLink]="['/games', g.key]"
+          (click)="goToGame(g.key)"
+        >
+          <img [src]="g.img" [alt]="g.title">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SINGLEPLAYER: large cards -->
+  <div *ngIf="activeTab === 'Singleplayer'" class="section">
+    <h5>Singleplayer</h5>
+    <div class="cards large">
+      <div
+        class="card"
+        *ngFor="let g of singleplayer"
+        [class.selected]="selectedGame === g.key"
+      >
+        <button
+          type="button"
+          [routerLink]="['/games', g.key]"
+          (click)="goToGame(g.key)"
+        >
+          <img [src]="g.img" [alt]="g.title">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MULTIPLAYER: large cards -->
+  <div *ngIf="activeTab === 'Multiplayer'" class="section">
+    <h5>Multiplayer</h5>
+    <div class="cards large">
+      <div
+        class="card"
+        *ngFor="let g of multiplayer"
+        [class.selected]="selectedGame === g.key"
+      >
+        <button
+          type="button"
+          [routerLink]="['/games', g.key]"
+          (click)="goToGame(g.key)"
+        >
+          <img [src]="g.img" [alt]="g.title">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

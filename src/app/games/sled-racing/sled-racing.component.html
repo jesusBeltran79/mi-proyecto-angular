@@ -1,0 +1,20 @@
+<app-start-screen
+  *ngIf="stage==='start'"
+  (play)="onPlay()"
+  (instructions)="onShowInstructions()">
+</app-start-screen>
+
+<app-instruction-modal
+  *ngIf="stage==='instructions'"
+  (closed)="onCloseInstructions()">
+</app-instruction-modal>
+
+<app-game-screen
+  *ngIf="stage==='playing'">
+</app-game-screen>
+
+<app-end-screen
+  *ngIf="stage==='end'"
+  (playAgain)="onPlayAgain()"
+  (toMenu)="onToMenu()">
+</app-end-screen>

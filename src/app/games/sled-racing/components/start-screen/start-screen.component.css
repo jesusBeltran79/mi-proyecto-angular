@@ -1,0 +1,48 @@
+.start-screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+/* Animación de copos de nieve */
+.snow-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('/assets/sled-racing/images/snowflake.png') repeat;
+  pointer-events: none;
+  animation: fall 8s linear infinite;
+}
+
+@keyframes fall {
+  0%   { background-position: 0 -200px; }
+  100% { background-position: 0 600px; }
+}
+
+.title {
+  font-size: 48px;
+  margin-bottom: 60px;
+  z-index: 1;
+}
+
+.btn {
+  font-size: 18px;
+  padding: 12px 24px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.btn-play {
+  width: 180px;
+  height: 50px;
+}
+
+.btn-instructions {
+  width: 140px;
+  height: 40px;
+}

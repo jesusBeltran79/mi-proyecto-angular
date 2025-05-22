@@ -1,0 +1,10 @@
+<div class="hud">
+  <div class="hud-item">Time: {{ time }}</div>
+  <div class="hud-item">Lives:
+    <ng-container *ngFor="let i of [].constructor(lives); let idx = index">
+      <img src="/assets/sled-racing/images/heart.png" alt="Life" class="heart">
+    </ng-container>
+  </div>
+  <div class="hud-item">Place: {{ position }}</div>
+  <div class="hud-item">Score: {{ score }}</div>
+</div>

@@ -1,0 +1,46 @@
+.menu-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.menu-img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.menu-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  background-color: rgba(255, 221, 0, 0.9);
+  border: 2px solid #ffaa00;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Variante de color para “VOLVER” */
+.back-btn {
+  background-color: rgba(0, 170, 255, 0.9);
+  border-color: #0077cc;
+  color: white;
+}

@@ -1,0 +1,11 @@
+<div class="hud">
+  <div class="lives">
+    <ng-container *ngFor="let i of [].constructor(lives)">
+      <img src="/assets/bean-counters/Assets/Hazards/Life.png" class="icon">
+    </ng-container>
+  </div>
+  <div class="info">
+    <span class="level">Level {{ level }}</span>
+    <span class="score">Score: {{ score }}</span>
+  </div>
+</div>

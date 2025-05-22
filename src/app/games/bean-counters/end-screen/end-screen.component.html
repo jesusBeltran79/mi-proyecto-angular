@@ -1,0 +1,22 @@
+<div class="end-screen">
+  <!-- Fondo con Assets/Main.png -->
+  <div
+    class="main-bg"
+    style="
+      background: url('/assets/bean-counters/Assets/Main.png') no-repeat center;
+      background-size: cover;
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    ">
+  </div>
+
+  <div class="content">
+    <h2>{{ won ? 'You Win!' : 'Game Over' }}</h2>
+    <p>Final Score: {{ finalScore }}</p>
+    <p>Level Reached: {{ finalLevel }}</p>
+    <button (click)="onPlayAgain()">Play Again</button>
+    <button (click)="onExit()">Exit</button>
+  </div>
+</div>

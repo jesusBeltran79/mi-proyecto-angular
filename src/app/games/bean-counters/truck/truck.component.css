@@ -1,0 +1,10 @@
+.truck {
+  position: absolute;
+  /* pegado abajo */
+  bottom: 0;
+  /* pegado al borde derecho */
+  right: 0;
+  /* 2× el ancho previo (300px → 600px) */
+  width: 400px;
+  height: auto;
+}

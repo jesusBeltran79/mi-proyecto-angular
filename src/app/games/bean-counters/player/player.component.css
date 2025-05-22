@@ -1,0 +1,8 @@
+.player {
+  position: absolute;
+  /* pegado abajo */
+  bottom: 0;
+  /* 2× el ancho actual (antes 256px), ahora 512px */
+  width: 512px;
+  transition: left 0.05s linear;
+}

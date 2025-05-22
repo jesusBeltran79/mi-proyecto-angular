@@ -1,0 +1,9 @@
+<img
+  [src]="
+    animSprite
+      ? '/assets/bean-counters/Assets/Player/' + animSprite
+      : '/assets/bean-counters/Assets/Player/' + currentSprite + '.png'
+  "
+  [style.left.px]="x - 256"
+  class="player"
+/>

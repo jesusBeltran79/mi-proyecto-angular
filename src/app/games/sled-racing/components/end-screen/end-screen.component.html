@@ -1,0 +1,10 @@
+<div class="end-overlay">
+  <div class="end-box">
+    <h2>{{ gameState.lives > 0 ? 'You Finished!' : 'Game Over' }}</h2>
+    <p>Time: {{ gameState.getTimeElapsed() }}</p>
+    <p>Position: {{ gameState.finalPosition }}/4</p>
+    <p>Total Score: {{ gameState.score }}</p>
+    <button (click)="onPlayAgain()">Play Again</button>
+    <button (click)="onToMenu()">Main Menu</button>
+  </div>
+</div>

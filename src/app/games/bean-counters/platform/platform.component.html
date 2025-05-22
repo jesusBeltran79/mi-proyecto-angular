@@ -1,0 +1,10 @@
+<div class="platform" (click)="onClick()">
+  <ng-container *ngFor="let _ of stack; let i = index">
+    <img
+      src="/assets/bean-counters/Assets/Hazards/Bag_1.png"
+      class="platform-bag"
+      [style.bottom.px]="i * 16"
+      [style.transform]="'rotate(180deg)'"
+    />
+  </ng-container>
+</div>

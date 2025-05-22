@@ -1,0 +1,17 @@
+<div class="game-screen" [class.level-change]="changingLevel">
+  <app-truck></app-truck>
+
+  <ng-container *ngFor="let o of renderObjects; trackBy:trackById">
+    <img
+      [src]="'/assets/bean-counters/Assets/Hazards/'+o.sprite"
+      [style.left.px]="o.x"
+      [style.top.px]="o.y"
+      [style.width.px]="48*3"
+      class="falling-object"
+    />
+  </ng-container>
+
+  <app-player [x]="game.playerX"></app-player>
+  <app-platform (unload)="game.unload()"></app-platform>
+  <app-hud></app-hud>
+</div>

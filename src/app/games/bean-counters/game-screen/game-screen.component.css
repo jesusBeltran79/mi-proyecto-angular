@@ -1,0 +1,28 @@
+/* Animación de caída (sin cambios) */
+@keyframes fall {
+  0%   { transform: translateY(0)    rotate(0deg); opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateY(500px) rotate(10deg); opacity: 0; }
+}
+.falling-object {
+  position: absolute;
+  width: 48px;
+  animation-name: fall;
+  animation-timing-function: linear;
+}
+
+/* Área de juego: 95% viewport y centrada */
+.game-screen {
+  position: relative;
+  width: 95vw;
+  height: 95vh;
+  margin: 2.5vh auto;              /* centra vertical y horizontal */
+  background: url('/assets/bean-counters/Assets/Background.png') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+.game-screen.level-change {
+  opacity: 0;
+}

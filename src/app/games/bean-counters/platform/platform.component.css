@@ -1,0 +1,13 @@
+.platform {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 150px; height:100px;
+  background: url('/assets/bean-counters/Assets/Platform.png') no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+}
+.platform-bag {
+  position: absolute;
+  width: 144px  ;  /* 300% del ancho base */
+  height: auto;
+}

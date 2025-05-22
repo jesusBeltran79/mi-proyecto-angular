@@ -1,0 +1,14 @@
+<div class="start-screen">
+  <h1 class="title">Bean Counters</h1>
+
+  <div class="buttons">
+    <button class="btn play" (click)="onPlay()">Play</button>
+    <button class="btn instr" (click)="onInstructions()">Instructions</button>
+    <button class="btn back" (click)="onBack()">Volver</button>  <!-- Nuevo -->
+  </div>
+
+  <app-instruction-modal
+    *ngIf="showInstructions"
+    (close)="onCloseInstructions()">
+  </app-instruction-modal>
+</div>

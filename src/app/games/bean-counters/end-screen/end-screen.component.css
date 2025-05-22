@@ -1,0 +1,33 @@
+.end-screen {
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.end-screen .main-bg {
+  z-index: -1;
+}
+
+.end-screen .content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.end-screen h2 {
+  font-size: 4rem;    /* más grande */
+  margin-bottom: 1rem;
+}
+
+.end-screen p {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.end-screen button {
+  font-size: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+}
