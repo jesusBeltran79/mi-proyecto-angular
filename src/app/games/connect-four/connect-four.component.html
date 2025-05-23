@@ -1,0 +1,17 @@
+<!-- connect-four.component.html -->
+<div class="game-container">
+  <div class="status">
+    Es el jugador <span class="current-player">{{ currentPlayer | uppercase }}</span> su turno.
+  </div>
+
+  <table class="gameboard">
+    <tr *ngFor="let row of board; let i = index">
+      <td *ngFor="let cell of row; let j = index"
+          [ngClass]="cell"
+          (click)="dropDisc(j)">
+      </td>
+    </tr>
+  </table>
+
+  <button mat-raised-button color="primary" (click)="restart()">Nuevo juego</button>
+</div>

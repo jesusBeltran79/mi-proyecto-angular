@@ -23,18 +23,19 @@ export class NavbarComponent {
 
   // datos de juegos
   singleplayer: GameCard[] = [
-    { key: 'pizzatron',    title: 'Pizzatron 3000',    img: '/assets/phaser/games/pizzatron.png' },
-    { key: 'bean-counters',title: 'Bean Counters',     img: '/assets/phaser/games/BeanCounters.png' }
+    { key: 'pizzatron',     title: 'Pizzatron 3000', img: '/assets/phaser/games/pizzatron.png' },
+    { key: 'bean-counters', title: 'Bean Counters',  img: '/assets/phaser/games/BeanCounters.png' }
   ];
 
   multiplayer: GameCard[] = [
-    { key: 'mancala',      title: 'Mancala',           img: '/assets/phaser/games/mancala.png' },
-    { key: 'cardjitsu',    title: 'Card Jitsu',        img: '/assets/phaser/games/cardjitsu.png' },
-    { key: 'sledracing',      title: 'Sled Racing', img: '/assets/phaser/games/sledRacing.png' },
-    { key: 'cuatroenraya', title: 'Cuatro en Raya',    img: '/assets/phaser/games/cuatroenraya.png' }
+    { key: 'mancala',    title: 'Mancala',    img: '/assets/phaser/games/mancala.png' },
+    { key: 'cardjitsu',  title: 'Card Jitsu', img: '/assets/phaser/games/cardjitsu.png' },
+    { key: 'sledracing', title: 'Sled Racing',img: '/assets/phaser/games/sledRacing.png' },
+    // ← Aquí cambiamos la key de 'cuatroenraya' a 'connect-four'
+    { key: 'connect-four', title: 'Cuatro en Raya', img: '/assets/phaser/games/cuatroenraya.png' }
   ];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   // cambia la pestaña superior
   selectTab(tab: string) {

@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>¡Juego terminado!</h2>
+<mat-dialog-content>
+  <p>Ha ganado el jugador <strong class="{{ data.winner }}">{{ data.winner | uppercase }}</strong>.</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onMenu()">Volver al menú</button>
+  <button mat-flat-button color="primary" (click)="onRestart()">Jugar de nuevo</button>
+</mat-dialog-actions>

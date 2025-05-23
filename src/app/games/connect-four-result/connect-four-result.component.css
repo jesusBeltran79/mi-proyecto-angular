@@ -1,0 +1,12 @@
+mat-dialog-content p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+strong.red {
+  color: #f00;
+}
+
+strong.yellow {
+  color: #ff0;
+}
