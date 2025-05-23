@@ -29,7 +29,7 @@ export class GameStateService {
   private readonly gravity       = 300;
   private readonly minSpeed      = 300;
   private readonly spawnInterval = 2;
-  private readonly baseRadius    = 256 * 0.85*0.85; // 15% más pequeño
+  private readonly baseRadius    = 256 * 0.85*0.9; // 15% más pequeño
 
   private floorStartX = 150 * 1.15;
   private floorEndX   = window.innerWidth * 0.95 - 50;
@@ -122,8 +122,14 @@ export class GameStateService {
   private handleHit(o: DroppingObject): void {
     switch (o.type) {
       case 'bag':
+        // Incrementamos bolsas
         this.heldBagCount++;
         this.assets.playSound('Catch.mp3');
+        // Si supera 5, perdemos una vida y reiniciamos bolsas a 0
+        if (this.heldBagCount > 5) {
+          this.loseLife();
+          this.heldBagCount = 0;
+        }
         break;
       case 'life':
         this.lives$.next(this.lives$.value + 1);
@@ -142,6 +148,7 @@ export class GameStateService {
         this.assets.playSound('Vase_Land.mp3');
         break;
     }
+    // Tras obstáculos, aseguramos que bolsas quedan a 0
     if (o.type !== 'bag' && o.type !== 'life') {
       this.heldBagCount = 0;
     }
